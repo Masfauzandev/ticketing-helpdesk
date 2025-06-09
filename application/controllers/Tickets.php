@@ -21,54 +21,6 @@ class Tickets extends MY_Controller
         $this->render('New Ticket', 'ticket/create_new', $data);
     }
 
-    public function submit_new()
-    {
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $this->load->model('user/User_model', 'Users');
-
-        $data = [
-            'ticket_no' => '' . strtoupper(uniqid()),
-            'title' => $this->input->post('title'),
-            'description' => $this->input->post('description'),
-            'owner' => $this->Session->getLoggedDetails()['username'],
-            'assign_to' => $this->input->post('assign_to'),
-            'status' => 0,
-            'created' => time(),
-            'updated' => time()
-        ];
-
-        $this->Tickets->add($data);
-
-        // ✅ Kirim email ke user yang di-assign
-        $assign_id = $this->input->post('assign_to');
-        $assign_user = $this->Users->getByID($assign_id);
-
-        if ($assign_user && !empty($assign_user['email'])) {
-            $this->load->library('email');
-
-            $this->email->from('no-reply@yourdomain.com', 'Ticketing System');
-            $this->email->to($assign_user['email']);
-            $this->email->subject('Tiket Baru Ditugaskan');
-            $this->email->message(
-                "Halo {$assign_user['name']},\n\n" .
-                "Anda telah ditugaskan tiket baru:\n\n" .
-                "Judul: {$data['title']}\n" .
-                "Deskripsi: {$data['description']}\n\n" .
-                "Silakan login ke sistem untuk menindaklanjuti tiket ini."
-            );
-
-            if (!$this->email->send()) {
-                log_message('error', 'Gagal kirim email ke ' . $assign_user['email']);
-            }
-        }
-
-        // ✅ Redirect setelah submit
-        redirect('Tickets/my_tickets');
-    } else {
-        show_404();
-    }
-    }
-
     public function list_all()
     {
         $data['title'] = 'All Tickets';
