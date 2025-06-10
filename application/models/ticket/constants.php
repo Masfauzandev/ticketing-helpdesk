@@ -33,6 +33,7 @@ define('TICKET_STATUS', array(
 ));
 
 define('TICKET_CATEGORIES', array(
+    'ERP',
     'CPU',
     'Monitor',
     'Laptop',
