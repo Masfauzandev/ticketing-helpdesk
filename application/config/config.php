@@ -26,6 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $host = is_https() ? "https://" : "http://";
 $host .= isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : "";
+$host .= "/tiket-master/"; 
 $config['base_url'] = $host;
 
 /*
