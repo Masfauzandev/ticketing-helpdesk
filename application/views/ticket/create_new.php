@@ -235,7 +235,7 @@
 
                     if (response.data && response.data.result) {
                         showNotification('success', 'Ticket created successfully.', {}, function () {
-                            window.location.href = "/tickets/view_ticket/" + response.data.result;
+                            window.location.href = BASE_URL + "/tickets/view_ticket/" + response.data.result;
                         });
                     } else {
                         $('#attached_files').html('');
