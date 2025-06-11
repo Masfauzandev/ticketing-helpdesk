@@ -156,7 +156,6 @@
 </section>
 
 <script>
-    const BASE_URL = "<?= base_url() ?>";
     $(document).ready(function () {
 
         var attached_files = [];
