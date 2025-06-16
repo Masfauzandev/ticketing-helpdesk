@@ -5,7 +5,7 @@
                 <!-- Logo & Information Panel-->
                 <div class="col-lg-6 p-0">
                     <div class="info d-flex align-items-center justify-content-center"
-                        style="background-image: url('<?= base_url('tiket-master/assets/img/kantor.png') ?>');
+                        style="background-image: url('<?= base_url('assets/img/kantor.png') ?>');
                                 background-size: cover;
                                 background-position: center;
                                 height: 100%;
