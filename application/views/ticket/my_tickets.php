@@ -83,7 +83,7 @@
                         title: "Created On",
                         data: "created",
                         render: function (data) {
-                            return data?'<span class="rel-time" data-value="'+data+'000"></span>':'-';
+                            return data?'<span class="rel-time" data-value="'+data+'000">'+data+'</span>' :'-';
                         }
                     },
 
