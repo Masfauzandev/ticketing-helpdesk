@@ -13,10 +13,10 @@
                                 <form>
                                     <div class="form-group">
                                         <div class="row">
-                                            <label class="col-sm-2 form-control-label" for="subject">Subjek</label>
+                                            <label class="col-sm-2 form-control-label" for="subject">Subject</label>
                                             <div class="col-sm-6 select">
                                                        <select id="subject" name="subject" class="form-control" required>
-                                                            <option value="">Pilih Subject</option>
+                                                            <option value="">Choose Subject</option>
                                                             <?php foreach ($subjects as $key => $subject): ?>
                                                                 <option value="<?= $subject ?>"><?= $subject ?></option>
                                                             <?php endforeach; ?>
@@ -26,11 +26,11 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <label class="col-sm-2 form-control-label">Kategori</label>
+                                            <label class="col-sm-2 form-control-label">Category</label>
                                             <div class="col-sm-6 select">
                                                 <select name="category" id="category_dd" class="form-control"
                                                         style="width: 100%">
-                                                    <option value="null">Pilih Kategori</option>
+                                                    <option value="null">Choose Category</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -47,20 +47,20 @@
                                     </div> -->
                                     <div class="form-group">
                                         <div class="row">
-                                            <label class="col-sm-2 form-control-label">Prioritas</label>
+                                            <label class="col-sm-2 form-control-label">Priority</label>
                                             <div class="col-sm-6 select">
                                                 <select name="severity" id="severity_dd" class="form-control">
-                                                    <option value="null">Pilih Prioritas</option>
+                                                    <option value="null">Choose Priority</option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="assign_to" class="col-sm-2 form-control-label">Teknisi</label>
+                                        <label for="assign_to" class="col-sm-2 form-control-label">Techincal</label>
                                         <div class="col-sm-6">
                                             <select name="assign_to" id="assign_to" class="form-control" required>
-                                                <option value="">Pilih Teknisi</option>
+                                                <option value="">Choose Technical</option>
                                                 <?php foreach ($users as $user): ?>
                                                     <option value="<?= $user['username'] ?>"><?= $user['name'] ?></option>
                                                 <?php endforeach; ?>
@@ -90,7 +90,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <label class="col-sm-2 form-control-label">Permasalahan</label>
+                                            <label class="col-sm-2 form-control-label">Problem</label>
                                             <div class="col-sm-6">
                                                 <input id="purpose" type="text" name="purpose" required=""
                                                        class="form-control" placeholder="Wajib Di isi">
@@ -100,7 +100,7 @@
 
                                     <div class="form-group">
                                         <div class="row">
-                                            <label class="col-sm-2 form-control-label">Deskripsi</label>
+                                            <label class="col-sm-2 form-control-label">Description</label>
                                             <div class="col-sm-6">
                                                 <div id="message"></div>
                                             </div>
@@ -235,7 +235,7 @@
 
                     if (response.data && response.data.result) {
                         showNotification('success', 'Ticket created successfully.', {}, function () {
-                            window.location.href = BASE_URL + "/tickets/view_ticket/" + response.data.result;
+                            window.location.href = BASE_URL + "tickets/view_ticket/" + response.data.result;
                         });
                     } else {
                         $('#attached_files').html('');
