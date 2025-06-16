@@ -62,7 +62,7 @@
                         title: "Category",
                         data: "category",
                         render: function (data) {
-                            return data?('<span class="category" data-value="'+data+'">') +data+'</span>':'-';
+                            return data?('<span class="category" data-value="'+data+'">'):'-';
                         }
                     },
                     {
