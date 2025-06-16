@@ -48,7 +48,7 @@
                         title: "Priority",
                        data: "priority",
                         render: function (data) {
-                            return data?'<span class="priority" data-value="'+data+'">' :'Not Assigned';
+                            return data?'<span class="priority" data-value="'+data+'">'+data+'</span>' :'Not Assigned';
                         }
                     },
                     {
