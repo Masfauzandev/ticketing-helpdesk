@@ -48,14 +48,14 @@
                         title: "Priority",
                        data: "priority",
                         render: function (data) {
-                            return data?'<span class="tik-priority" data-value="'+data+'">':'Not Assigned';
+                            return data?'<span class="priority" data-value="'+data+'">'+data+'</span>' : 'Not Assigned';
                         }
                     },
                     {
                         title: "Status",
                         data: "status",
                         render: function (data) {
-                            return '<span class="tik-status" data-value="'+data+'">';
+                            return '<span class="status" data-value="'+data+'">'+data+'</span>' : '-';
                         }
                     },
                     {
