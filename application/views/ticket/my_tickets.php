@@ -41,28 +41,40 @@
                         title: "Severity",
                        data: "severity",
                         render: function (data) {
+
                             return '<span class="severity" data-value="'+data+'">'+data+'</span>' : '-';
+
+                            return '<span class="tik-severity" data-value="'+data+'">';
+b9b04a9058e193b2e1451c87639b2365c56f39d8
                         }
                     },
                     {
                         title: "Priority",
                        data: "priority",
                         render: function (data) {
+
                             return data?'<span class="priority" data-value="'+data+'">'+data+'</span>' :'Not Assigned';
+
+                            return data?'<span class="tik-priority" data-value="'+data+'">':'Not Assigned';
+b9b04a9058e193b2e1451c87639b2365c56f39d8
                         }
                     },
                     {
                         title: "Status",
                         data: "status",
                         render: function (data) {
+
                             return '<span class="status" data-value="'+data+'">'+data+'</span>' : '-';
+
+                            return '<span class="tik-status" data-value="'+data+'">';
+b9b04a9058e193b2e1451c87639b2365c56f39d8
                         }
                     },
                     {
                         title: "Category",
                         data: "category",
                         render: function (data) {
-                            return data?('<span class="category" data-value="'+data+'">'):'-';
+                            return data?('<span class="tik-category" data-value="'+data+'">'):'-';
                         }
                     },
                     {
@@ -83,7 +95,7 @@
                         title: "Created On",
                         data: "created",
                         render: function (data) {
-                            return data?'<span class="rel-time" data-value="'+data+'000">'+data+'</span>' :'-';
+                            return data?'<span class="rel-time" data-value="'+data+'000">':'-';
                         }
                     },
 
