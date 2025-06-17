@@ -19,7 +19,7 @@
                             <form method="post" class="form-validate" action="">
                                 <div class="form-group">
                                     <input id="login-username" type="text" name="username" required data-msg="Please enter your username" class="input-material">
-                                    <label for="login-username" class="label-material">User Nama</label>
+                                    <label for="login-username" class="label-material">User Namaa</label>
                                 </div>
                                 <div class="form-group">
                                     <input id="login-password" type="password" name="password" required data-msg="Please enter your password" class="input-material">
