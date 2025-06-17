@@ -40,12 +40,11 @@
                     {
                         title: "Severity",
                        data: "severity",
-                        render: function (data) {
-
+                        render: function (data) <<<<<<< HEAD
                             return '<span class="severity" data-value="'+data+'">'+data+'</span>' : '-';
-
+=======
                             return '<span class="tik-severity" data-value="'+data+'">';
-b9b04a9058e193b2e1451c87639b2365c56f39d8
+>>>>>>> b9b04a9058e193b2e1451c87639b2365c56f39d8
                         }
                     },
                     {
@@ -53,14 +52,10 @@ b9b04a9058e193b2e1451c87639b2365c56f39d8
                        data: "priority",
                         render: function (data) {
 <<<<<<< HEAD
-
                             return data?'<span class="priority" data-value="'+data+'">'+data+'</span>' :'Not Assigned';
-
-                            return data?'<span class="tik-priority" data-value="'+data+'">':'Not Assigned';
-b9b04a9058e193b2e1451c87639b2365c56f39d8
 =======
-                            return data?'<span class="priority" data-value="'+data+'">'+data+'</span>' : 'Not Assigned';
->>>>>>> ddee094345106b2c4cbaec022e2272d7545a2806
+                            return data?'<span class="tik-priority" data-value="'+data+'">':'Not Assigned';
+>>>>>>> b9b04a9058e193b2e1451c87639b2365c56f39d8
                         }
                     },
                     {
@@ -68,14 +63,10 @@ b9b04a9058e193b2e1451c87639b2365c56f39d8
                         data: "status",
                         render: function (data) {
 <<<<<<< HEAD
-
                             return '<span class="status" data-value="'+data+'">'+data+'</span>' : '-';
-
-                            return '<span class="tik-status" data-value="'+data+'">';
-b9b04a9058e193b2e1451c87639b2365c56f39d8
 =======
-                            return '<span class="status" data-value="'+data+'">'+data+'</span>' : '-';
->>>>>>> ddee094345106b2c4cbaec022e2272d7545a2806
+                            return '<span class="tik-status" data-value="'+data+'">';
+>>>>>>> b9b04a9058e193b2e1451c87639b2365c56f39d8
                         }
                     },
                     {
