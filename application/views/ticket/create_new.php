@@ -93,7 +93,7 @@
                                             <label class="col-sm-2 form-control-label">Problem</label>
                                             <div class="col-sm-6">
                                                 <input id="purpose" type="text" name="purpose" required=""
-                                                       class="form-control" placeholder="Wajib Di isi">
+                                                       class="form-control" placeholder="must be filled in">
                                             </div>
                                         </div>
                                     </div>
