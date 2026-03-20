@@ -1,0 +1,76 @@
+/* Ticket Header Styles */
+
+.ticket-header-wrapper {
+    margin-bottom: -5px;
+    position: relative;
+    z-index: 10;
+}
+
+.ticket-status-badge {
+    color: #fff;
+    padding: 5px 25px;
+    border-radius: 5px 5px 0 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+    min-width: 120px;
+}
+
+.ticket-card {
+    background-color: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+}
+
+.ticket-number-badge {
+    background-color: #1a3a5c;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.ticket-subject {
+    font-weight: 800;
+    color: #000;
+    font-size: 1.8rem;
+}
+
+.ticket-label {
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.ticket-description-text {
+    color: #333;
+    font-weight: 500;
+}
+
+.ticket-attachment-footer {
+    border-top: 2px solid #e5e7eb;
+}
+
+.ticket-attachment-label {
+    color: #000;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.ticket-attachment-card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.ticket-attachment-icon {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.ticket-attachment-link {
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+}

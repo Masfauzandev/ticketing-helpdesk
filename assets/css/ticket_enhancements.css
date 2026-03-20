@@ -1,0 +1,98 @@
+/* Ticket Enhancements CSS */
+/* Following the existing template patterns from custom.css */
+
+/* Locked Ticket Indicator */
+.ticket-locked-badge {
+    background-color: #ffc107;
+    color: #856404;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Resolve Section Styling */
+.resolve-section {
+    background-color: #f8f9fa;
+    border-left: 4px solid #28a745;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.resolve-section .section-title {
+    color: #28a745;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Reason Section Styling */
+.reason-section {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.reason-section .section-title {
+    color: #856404;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Multi-select Category Dropdown */
+.select2-container--default .select2-selection--multiple {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    min-height: 38px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+/* Modal Styling */
+.modal-header.bg-success {
+    background-color: #28a745 !important;
+}
+
+.modal-header.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+/* Dashboard Statistics - Purple Icon */
+.icon.bg-purple {
+    background: linear-gradient(45deg, #6f42c1, #8e44ad);
+}
+
+/* User List - Login Tracking Columns */
+.login-info {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.login-info .fa {
+    margin-right: 5px;
+}
+
+/* Status Badge Colors */
+.badge.bg-primary {
+    background-color: #007bff !important;
+}
+
+.badge.bg-secondary {
+    background-color: #6c757d !important;
+}
+
+.badge.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.badge.bg-purple {
+    background-color: #6f42c1 !important;
+}

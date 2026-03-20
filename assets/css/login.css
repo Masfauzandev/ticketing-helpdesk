@@ -1,0 +1,51 @@
+/* Background untuk halaman login */
+.page.login-page {
+    background: url('../img/photos/pantai.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Panel kiri di halaman login */
+.login-left-panel {
+    background: url('../img/photos/kantor.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    min-height: 100%;
+}
+
+/* Overlay gelap supaya teks kelihatan */
+.login-left-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+/* Konten teks di atas overlay */
+.login-left-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+.login-left-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.login-left-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.login-logo {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: -50px;
+    margin-top: -150px;
+    margin-left: -10px;
+}
