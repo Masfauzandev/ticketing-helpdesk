@@ -30,8 +30,13 @@
                     <div class="login-form-wrapper">
                         <div class="login-form-card">
                             <!-- Logo -->
-                            <div class="login-logo-wrap">
-                                <img src="<?= BASE_URL ?>assets/img/logo/logo.png" alt="Logo" class="login-logo">
+                            <div class="login-logo-wrap horizontal-logos">
+                                <img src="<?= BASE_URL ?>assets/img/logo/aga.png" alt="AGA" class="login-logo-item">
+                                <img src="<?= BASE_URL ?>assets/img/logo/bag.png" alt="BAG" class="login-logo-item">
+                                <img src="<?= BASE_URL ?>assets/img/logo/mag.jpeg" alt="MAG" class="login-logo-item">
+                                <img src="<?= BASE_URL ?>assets/img/logo/mbg.jpg" alt="MBG" class="login-logo-item">
+                                <img src="<?= BASE_URL ?>assets/img/logo/sea.png" alt="SEA" class="login-logo-item">
+                                <img src="<?= BASE_URL ?>assets/img/logo/tbg.png" alt="TBG" class="login-logo-item">
                             </div>
 
                             <!-- Form Header -->

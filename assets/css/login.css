@@ -211,12 +211,27 @@ body {
     margin-bottom: 4px;
 }
 
+.login-logo-wrap.horizontal-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap; /* allow wrapping on small screens */
+    margin-bottom: 24px;
+}
+
 .login-logo {
     width: 180px; /* Reduced further so the tall logo image takes less vertical space */
     max-width: 100%;
     height: auto;
     object-fit: contain;
     margin: 0 auto;
+}
+
+.login-logo-item {
+    height: 40px; /* Adjust height as needed */
+    width: auto;
+    object-fit: contain;
 }
 
 /* Form header */
