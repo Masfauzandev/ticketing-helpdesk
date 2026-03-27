@@ -1,61 +1,99 @@
 <div class="page login-page">
     <div class="container d-flex align-items-center">
-        <div class="form-holder has-shadow">
+        <div class="form-holder">
             <div class="row">
-                <!-- Logo & Information Panel-->
+                <!-- Left Panel - Branding -->
                 <div class="col-lg-6 login-left-panel d-flex align-items-center">
                     <div class="login-left-content m-auto">
+                        <div class="left-brand-icon">
+                            <i class="fa fa-headphones"></i>
+                        </div>
                         <h1>Welcome to LKI</h1>
+                        <p class="left-subtitle">Helpdesk & Ticketing System<br>Layanan support terpadu untuk kebutuhan Anda</p>
+                        <ul class="left-features">
+                            <li><i class="fa fa-ticket"></i> Buat dan kelola tiket dengan mudah</li>
+                            <li><i class="fa fa-clock-o"></i> Pantau progress secara real-time</li>
+                            <li><i class="fa fa-users"></i> Kolaborasi tim yang efisien</li>
+                        </ul>
+                    </div>
+                    <!-- Decorative elements -->
+                    <div class="login-left-decor-sm"></div>
+                    <div class="login-left-decor-dots">
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span>
                     </div>
                 </div>
-                <!-- Form Panel    -->
-                <div class="col-lg-6 bg-white">
-                    <div class="form d-flex align-items-center">
-                        <div class="content">
-                            <!-- Logo Perusahaan -->
-                            <div class="text-center mb-4">
+
+                <!-- Right Panel - Login Form -->
+                <div class="col-lg-6 login-right-panel">
+                    <div class="login-form-wrapper">
+                        <div class="login-form-card">
+                            <!-- Logo -->
+                            <div class="login-logo-wrap">
                                 <img src="<?= BASE_URL ?>assets/img/logo/logo.png" alt="Logo" class="login-logo">
                             </div>
+
+                            <!-- Form Header -->
+                            <div class="login-form-header">
+                                <h2>Sign In</h2>
+                                <p>Masukkan kredensial Anda untuk melanjutkan</p>
+                            </div>
+
+                            <!-- Login Form -->
                             <form method="post" class="form-validate" action="">
                                 <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>">
-                                <div class="form-group">
+                                
+                                <!-- Username -->
+                                <div class="login-input-group">
+                                    <i class="fa fa-user input-icon"></i>
                                     <input id="login-username" type="text" name="username" required
-                                        data-msg="Please enter your username" class="input-material">
-                                    <label for="login-username" class="label-material">User Name</label>
+                                        placeholder="Username" data-msg="Please enter your username">
                                 </div>
-                                <div class="form-group" style="position: relative;">
+
+                                <!-- Password -->
+                                <div class="login-input-group">
+                                    <i class="fa fa-lock input-icon"></i>
                                     <input id="login-password" type="password" name="password" required
-                                        data-msg="Please enter your password" class="input-material"
-                                        style="padding-right: 40px;">
-                                    <label for="login-password" class="label-material">Password</label>
-                                    <span class="toggle-login-password"
-                                        style="position: absolute; right: 10px; top: 10px; cursor: pointer; user-select: none;">
-                                        <i class="fa fa-eye" style="color: #999;"></i>
+                                        placeholder="Password" data-msg="Please enter your password"
+                                        style="padding-right: 48px;">
+                                    <span class="toggle-password toggle-login-password">
+                                        <i class="fa fa-eye"></i>
                                     </span>
                                 </div>
-                                <button type="submit" id="login" href="" class="btn btn-primary">Login</button>
-                                <!-- This should be submit button but I replaced it with <a> for demo purposes-->
+
+                                <!-- Login Button -->
+                                <button type="submit" id="login" class="login-btn">
+                                    <i class="fa fa-sign-in" style="margin-right: 8px;"></i>Sign In
+                                </button>
                             </form>
-                            <div>
+
+                            <!-- Messages -->
+                            <div class="login-messages">
                                 <?= get_msg(); ?>
                             </div>
-                            <a href="<?= BASE_URL ?>auth/forgot_password" class="forgot-pass">Forgot
-                                Password?</a><br><small>Do not have an account?</small><a
-                                href="<?= BASE_URL ?>auth/register" class="signup">Sign Up</a>
+
+                            <!-- Links -->
+                            <div class="login-links">
+                                <a href="<?= BASE_URL ?>auth/forgot_password" class="forgot-link">Lupa Password?</a>
+                                <span class="divider"></span>
+                                <span class="signup-text">Belum punya akun?<a href="<?= BASE_URL ?>auth/register" class="signup-link">Daftar</a></span>
+                            </div>
                         </div>
 
+                        <!-- Copyright -->
+                        <div class="login-copyright">
+                            <p>Powered by <strong>gasindogroup</strong></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="copyrights text-center text-dark">
-        <p>Powered by <strong>gasindogroup</strong></p>
-    </div>
 </div>
 
 <script>
-    // Hold to show password on login page - using vanilla JS + jQuery fallback
+    // Hold to show password on login page
     (function() {
         function initPasswordToggle() {
             var passwordInput = document.getElementById('login-password');

@@ -1,18 +1,8 @@
-.form-group {
-    margin-bottom: 5px !important;
-    margin-left: 10px !important;
-}
+/* register.css - Minimal overrides for register page */
+/* Main styling is handled by login.css shared classes */
 
-.card-header {
-    background: #007bff !important;
-    color: white !important;
-}
-
-.register-background {
-    background: url('../img/photos/pantai.jpg') no-repeat center center fixed;
-    background-size: cover;
-    width: 100%;
-    min-height: 100vh;
-    padding-top: 40px;
-    padding-bottom: 40px;
+/* Register page uses wider right panel */
+.register-page .login-right-panel {
+    overflow-y: auto;
+    overflow-x: hidden;
 }

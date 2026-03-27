@@ -81,23 +81,7 @@ class User extends MY_Controller
 		$data['stats']['total_agents'] = count($this->Users->getBy(null, array('type' => USER_AGENT)));
 		$data['stats']['total_manager'] = count($this->Users->getBy(null, array('type' => USER_MANAGER)));
 
-		$data['stats']['count_by_priority']['high'] = array(
-			count($this->Tickets->getBy(null, array('priority' => TICKET_PRIORITY_HIGH, 'status' => TICKET_STATUS_OPEN))),
-			count($this->Tickets->getBy(null, array('priority' => TICKET_PRIORITY_HIGH, 'status' => TICKET_STATUS_ASSIGNED))),
-			count($this->Tickets->getBy(null, array('priority' => TICKET_PRIORITY_HIGH, 'status' => TICKET_STATUS_CLOSED)))
-		);
 
-		$data['stats']['count_by_priority']['medium'] = array(
-			count($this->Tickets->getBy(null, array('priority' => TICKET_PRIORITY_MEDIUM, 'status' => TICKET_STATUS_OPEN))),
-			count($this->Tickets->getBy(null, array('priority' => TICKET_PRIORITY_MEDIUM, 'status' => TICKET_STATUS_ASSIGNED))),
-			count($this->Tickets->getBy(null, array('priority' => TICKET_PRIORITY_MEDIUM, 'status' => TICKET_STATUS_CLOSED)))
-		);
-
-		$data['stats']['count_by_priority']['low'] = array(
-			count($this->Tickets->getBy(null, array('priority' => TICKET_PRIORITY_LOW, 'status' => TICKET_STATUS_OPEN))),
-			count($this->Tickets->getBy(null, array('priority' => TICKET_PRIORITY_LOW, 'status' => TICKET_STATUS_ASSIGNED))),
-			count($this->Tickets->getBy(null, array('priority' => TICKET_PRIORITY_LOW, 'status' => TICKET_STATUS_CLOSED)))
-		);
 
 		// Dynamically load severity values from mst_severity table
 		$severities = $this->db->where('is_active', 1)->order_by('severity_val', 'DESC')->get('mst_severity')->result_array();

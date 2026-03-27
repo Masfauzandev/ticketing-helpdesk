@@ -344,23 +344,6 @@
     </div>
 </section>
 
-<section class="feeds" style="margin-top: -44px;">
-    <div class="container col-left-no-padding">
-        <div class="row">
-            <!-- Trending Articles-->
-            <div class="col-md-12">
-                <div class="bar-chart-example card custom-border-radius w-100">
-                    <div class="card-header d-flex align-items-center  custom-border-radius">
-                        <h2 class="h3">Ticket Status By Priority</h2>
-                    </div>
-                    <div class="card-body">
-                        <canvas id="priority-bar-graph" height="90"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <script>
 
@@ -476,95 +459,6 @@
                         "#cc5d5d"       // Closed hover
                     ]
                 }]
-        }
-    });
-
-    // ------------------------------------------------------- //
-    // Severity Bar graph
-    // ------------------------------------------------------ //
-    var BARCHARTEXMPLE = $('#priority-bar-graph');
-    var barChartExample = new Chart(BARCHARTEXMPLE, {
-        type: 'bar',
-        options: {
-            scales: {
-                xAxes: [{
-                    display: true,
-                    gridLines: {
-                        color: '#eee'
-                    }
-                }],
-                yAxes: [{
-                    display: true,
-                    gridLines: {
-                        color: '#eee'
-                    }
-                }]
-            },
-        },
-        data: {
-            labels: ["Open", "Assigned", "Closed"],
-            datasets: [
-                {
-                    label: "Priority High",
-                    backgroundColor: [
-                        gradient1,
-                        gradient1,
-                        gradient1
-                    ],
-                    hoverBackgroundColor: [
-                        gradient1,
-                        gradient1,
-                        gradient1
-                    ],
-                    borderColor: [
-                        gradient1,
-                        gradient1,
-                        gradient1
-                    ],
-                    borderWidth: 1,
-                    data: <?php echo json_encode($stats['count_by_priority']['high']) ?>,
-                },
-                {
-                    label: "Priority Medium",
-                    backgroundColor: [
-                        gradient2,
-                        gradient2,
-                        gradient2
-                    ],
-                    hoverBackgroundColor: [
-                        gradient2,
-                        gradient2,
-                        gradient2
-                    ],
-                    borderColor: [
-                        gradient2,
-                        gradient2,
-                        gradient2
-                    ],
-                    borderWidth: 1,
-                    data: <?php echo json_encode($stats['count_by_priority']['medium']) ?>,
-                },
-                {
-                    label: "Priority Low",
-                    backgroundColor: [
-                        gradient3,
-                        gradient3,
-                        gradient3
-                    ],
-                    hoverBackgroundColor: [
-                        gradient3,
-                        gradient3,
-                        gradient3
-                    ],
-                    borderColor: [
-                        gradient3,
-                        gradient3,
-                        gradient3
-                    ],
-                    borderWidth: 1,
-                    data: <?php echo json_encode($stats['count_by_priority']['low']) ?>,
-                }
-            ]
         }
     });
 

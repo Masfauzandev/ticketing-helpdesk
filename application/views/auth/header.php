@@ -13,16 +13,17 @@
         <link rel="stylesheet" href="<?= BASE_URL ?>assets/vendor/font-awesome/css/font-awesome.min.css">
         <!-- Fontastic Custom icon font-->
         <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/fontastic.css">
-        <!-- Google fonts - Poppins -->
+        <!-- Google fonts - Poppins & Inter -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
         <!-- theme stylesheet-->
         <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/style.default.css" id="theme-stylesheet">
         <!-- halaman register css -->
-        <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/register.css">
+        <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/register.css?v=<?= time() ?>">
         <!-- halaman login css -->
-        <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/login.css">
+        <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/login.css?v=<?= time() ?>">
         <!-- Custom stylesheet - for your changes-->
-        <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/custom.css">
+        <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/custom.css?v=<?= time() ?>">
         <!-- Favicon-->
         <link rel="shortcut icon" href="<?= BASE_URL ?>assets/img/favicon.ico">
         <!-- Tweaks for older IEs--><!--[if lt IE 9]>
